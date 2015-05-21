@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Question text:
+  = @question.question_text
+p
+  strong Level:
+  = @question.level
+p
+  strong Category:
+  = @question.category
+
+= link_to 'Edit', edit_question_path(@question)
+'|
+= link_to 'Back', questions_path
