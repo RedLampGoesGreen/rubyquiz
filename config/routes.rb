@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   devise_for :users
   devise_for :installs
   resources :answers
@@ -60,4 +62,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #routing for the starting page
+  root :controller => 'home', :action => :index
 end
