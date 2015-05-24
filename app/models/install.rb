@@ -3,4 +3,5 @@ class Install < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  validates :email, :id, presence: true, uniqueness: true
 end
