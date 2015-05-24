@@ -1,20 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  # devise_for :installs
+  devise_for :installs
   resources :answers
   resources :questions
   resources :players
-  resources :answers
   resources :levels
-  resources :levels
-  resources :players
-  resources :questions
   resources :categories
-  resources :categories
-  resources :players
-  resources :categories
-  resources :answers
-  resources :questions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
