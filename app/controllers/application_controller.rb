@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotUnique, with: :show_errors
   rescue_from SQLite3::ConstraintException, with: :show_errors
   
-  #forces user to login first!
-  before_action :authenticate_user!
+  #forces user to login first! deactivated for test
+  #before_action :authenticate_user!
 end
