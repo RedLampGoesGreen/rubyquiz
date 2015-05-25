@@ -5,10 +5,10 @@ p
   = @player.player_name
 p
   strong Level:
-  = @player.level
+  = @player.level.level_rank
 p
   strong User:
-  = @player.user
+  = @player.user.email
 
 = link_to 'Edit', edit_player_path(@player)
 '|

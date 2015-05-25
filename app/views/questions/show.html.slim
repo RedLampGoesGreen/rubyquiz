@@ -5,13 +5,13 @@ p
   = @question.question_text
 p
   strong Level:
-  = @question.level
+  = @question.level.level_rank
 p
   strong Category:
   = @question.category
 p
   strong Answer:
-  = @question.answer
+  = @question.answer.answer_text
 
 = link_to 'Edit', edit_question_path(@question)
 '|
