@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
-  belongs_to :question
+  has_one :question
   
   validates_presence_of :answer_text
 end

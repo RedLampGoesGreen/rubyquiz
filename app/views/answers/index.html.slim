@@ -4,7 +4,6 @@ table
   thead
     tr
       th Answer text
-      th Question
       th
       th
       th
@@ -13,7 +12,6 @@ table
     - @answers.each do |answer|
       tr
         td = answer.answer_text
-        td = answer.question
         td = link_to 'Show', answer
         td = link_to 'Edit', edit_answer_path(answer)
         td = link_to 'Destroy', answer, data: {:confirm => 'Are you sure?'}, :method => :delete

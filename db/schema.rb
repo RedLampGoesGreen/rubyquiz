@@ -11,16 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525092406) do
+ActiveRecord::Schema.define(version: 20150525101251) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "answer_text"
-    t.integer  "question_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
 
   create_table "answers_questions", id: false, force: :cascade do |t|
     t.integer "question_id", null: false
@@ -72,10 +69,12 @@ ActiveRecord::Schema.define(version: 20150525092406) do
     t.text     "question_text"
     t.integer  "level_id"
     t.integer  "category_id"
+    t.integer  "answer_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
+  add_index "questions", ["answer_id"], name: "index_questions_on_answer_id"
   add_index "questions", ["category_id"], name: "index_questions_on_category_id"
   add_index "questions", ["level_id"], name: "index_questions_on_level_id"
 

@@ -4,8 +4,10 @@ one:
   question_text: MyText
   level_id: 
   category_id: 
+  answer_id: 
 
 two:
   question_text: MyText
   level_id: 
   category_id: 
+  answer_id: 
