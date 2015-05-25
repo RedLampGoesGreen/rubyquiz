@@ -5,6 +5,7 @@ table
     tr
       th Player name
       th Level
+      th User
       th
       th
       th
@@ -14,6 +15,7 @@ table
       tr
         td = player.player_name
         td = player.level
+        td = player.user
         td = link_to 'Show', player
         td = link_to 'Edit', edit_player_path(player)
         td = link_to 'Destroy', player, data: {:confirm => 'Are you sure?'}, :method => :delete

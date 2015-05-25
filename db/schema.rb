@@ -55,11 +55,13 @@ ActiveRecord::Schema.define(version: 20150524094017) do
   create_table "players", force: :cascade do |t|
     t.string   "player_name"
     t.integer  "level_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "players", ["level_id"], name: "index_players_on_level_id"
+  add_index "players", ["user_id"], name: "index_players_on_user_id"
 
   create_table "questions", force: :cascade do |t|
     t.text     "question_text"

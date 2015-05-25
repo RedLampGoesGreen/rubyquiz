@@ -3,7 +3,9 @@
 one:
   player_name: MyString
   level_id: 
+  user_id: 
 
 two:
   player_name: MyString
   level_id: 
+  user_id: 
