@@ -16,8 +16,7 @@ table
       tr
         td = question.question_text
         td = question.level.level_rank
-        td = question.category
-        td = question.answer
+        td = question.category.category_text
         td = link_to 'Show', question
         td = link_to 'Edit', edit_question_path(question)
         td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete

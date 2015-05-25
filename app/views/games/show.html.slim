@@ -1,0 +1,14 @@
+p#notice = notice
+
+p
+  strong Category:
+  = @game.category.category_name
+p
+  strong Level:
+  = @game.Level.level_rank
+
+= link_to 'Edit', edit_game_path(@game)
+'|
+= link_to 'Back', games_path
+'|
+= link_to 'Start Game', controller: "games", action: "startgame", id: @game

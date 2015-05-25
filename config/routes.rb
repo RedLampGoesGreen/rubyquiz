@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'games/startgame'
+
+  resources :games
+  resources :games
   get 'game/game'
 
   get 'game/index'

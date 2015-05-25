@@ -1,4 +1,4 @@
-source 'https://rubygems.org' do
+source 'http://rubygems.org' do
 
 # codecoverage test
 gem 'simplecov', :require => false, :group => :test
