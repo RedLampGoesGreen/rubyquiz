@@ -2,10 +2,10 @@
 
 one:
   player_name: MyString
-  level_id: 
-  user_id: 
+  level_id: two
+  user_id: one
 
 two:
   player_name: MyString
-  level_id: 
-  user_id: 
+  level_id: one
+  user_id: two

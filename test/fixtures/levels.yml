@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  level_rank: 1
+  level_rank: one
 
 two:
-  level_rank: 1
+  level_rank: two

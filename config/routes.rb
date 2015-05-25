@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :games
-  resources :games
-  resources :games
+  get 'game/game'
+
+  get 'game/index'
+
+  get 'game/game'
+
   get 'games/start'
 
   get 'games/ask_question'

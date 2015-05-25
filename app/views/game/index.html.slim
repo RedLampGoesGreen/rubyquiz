@@ -1,0 +1,11 @@
+h1 Game#index
+p Find me in app/views/game/index.html.slim
+
+.field0
+  label for="category"  Category
+  input#basic-input name="basic-input" placeholder=("Select a category") size="40" type="text" /
+.field1
+  label for="level"  Level
+  input#basic-input name="basic-input" placeholder=("Select a level") size="40" type="text" /
+form.button_to action="/game/game" method="get" 
+  input type="submit" value="gamestart" /

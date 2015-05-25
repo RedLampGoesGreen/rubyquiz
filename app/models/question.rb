@@ -8,5 +8,5 @@ class Question < ActiveRecord::Base
   #a question always has to have a questiontext
   #though, especially in the beginning, the question doesn't have to have a category
   
-  validates_presence_of :level_id, :category_id, :question_text
+  validates_presence_of :level_id, :category_id, :question_text, :answer_id
 end

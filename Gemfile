@@ -48,6 +48,8 @@ gem 'simplecov', :require => false, :group => :test
     gem 'quiet_assets'
     gem 'simplecov'
   end
+  
+  gem 'bootstrap-sass'
 
   gem 'semantic-ui-sass'
   gem 'slim-rails'

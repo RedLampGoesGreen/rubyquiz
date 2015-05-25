@@ -2,12 +2,12 @@
 
 one:
   question_text: MyText
-  level_id: 
-  category_id: 
-  answer_id: 
+  level_id: one
+  category_id: two
+  answer_id: one
 
 two:
   question_text: MyText
-  level_id: 
-  category_id: 
-  answer_id: 
+  level_id: two
+  category_id: one
+  answer_id: two
