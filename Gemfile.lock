@@ -188,6 +188,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)!
   semantic-ui-sass!
   simplecov!
+  slim!
   slim-rails!
   spring!
   sqlite3!
