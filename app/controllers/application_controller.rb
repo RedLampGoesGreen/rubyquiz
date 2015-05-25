@@ -6,5 +6,5 @@ class ApplicationController < ActionController::Base
   rescue_from SQLite3::ConstraintException, with: :show_errors
   
   #forces user to login first! deactivated for test
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 end
