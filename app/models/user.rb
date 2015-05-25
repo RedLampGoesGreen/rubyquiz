@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  validates :email, :user_id, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   has_one :player
 end
