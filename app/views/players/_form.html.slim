@@ -11,8 +11,7 @@
     = f.text_field :player_name
   .field
     = f.label :level
-    = f.text_field :level
+    = f.number_field :level_id
   .field
-    = f.label :user
-    = f.text_field :user
+  	=f.hidden_field :user_id, :value => current_user.id
   .actions = f.submit
