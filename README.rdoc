@@ -10,3 +10,6 @@ Some Tests regarding the update and adding of a new Object dont work. Manual tes
 shown the functions do work.
 
 Yet not everything is working. I hope i get basic funcionalities done till Wednesday
+
+UPDATE: Basic functionalities added, fancy stuff follows
+"It's alivee, it's aaaaalllliiiivvveeeee MUHAHAHAHA' -Frankenstein
