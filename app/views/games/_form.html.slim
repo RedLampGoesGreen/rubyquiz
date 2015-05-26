@@ -10,6 +10,5 @@
     = f.label :category
     = f.number_field :category_id
   .field
-    = f.label :Level
-    = f.number_field :Level_id
+    = f.hidden_field :Level_id, :value => Player.find(current_user.id).level_id
   .actions = f.submit

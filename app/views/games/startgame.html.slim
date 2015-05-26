@@ -1,10 +1,10 @@
-- variable = Game.find(1).Level.questions.order("RANDOM()").first.id
+- variable = Game.find(params['id']).Level.questions.order("RANDOM()").first.id
 
 p#notice = notice
 
 p
   strong Category:
-  = Game.find(1).category.category_name
+  = Game.find(params['id']).category.category_name
 p
   strong Question:
   = Question.find(variable).question_text
@@ -17,6 +17,7 @@ p
   strong Antwortmöglichkeit2:
   =Answer.where.not(id: Question.find(variable).answer_id).order("RANDOM()").first.answer_text
   = button_to 'Log Diz Anza', games_loose_path, id: @game
+
 
 = link_to 'Back to games', controller: "games", action: "index"
 '|
