@@ -10,9 +10,14 @@ p
   = Question.find(variable).question_text
 
 p
-  strong Antwortmöglichkeiten:
-  = Answer.where(:question_id == variable).order("RANDOM()").first.answer_text
-  
+  strong Antwortmöglichkeit1:
+  = Answer.where(id: Question.find(variable).answer_id).order("RANDOM()").first.answer_text
+  = button_to 'Log Diz Anza', games_win_path, id: @game
+p
+  strong Antwortmöglichkeit2:
+  =Answer.where.not(id: Question.find(variable).answer_id).order("RANDOM()").first.answer_text
+  = button_to 'Log Diz Anza', games_loose_path, id: @game
+
 = link_to 'Back to games', controller: "games", action: "index"
 '|
 = link_to 'Another Round', controller: "games", action: "startgame", id: @game
