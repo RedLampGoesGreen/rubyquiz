@@ -1,4 +1,13 @@
+- newLevel = Player.find(current_user.id).level_id - 1
+- if newLevel > Level.minimum('id')
+	- Player.find(current_user.id).update_attributes(:level_id => newLevel)
+-else
+	p YO AR AT LOWEST LEVEL ... Dafuq are yu doin with yo live
+
 h1 What... How... this site isn't even prepared for such failure...
+p
+  strong NewLevelReached:
+  = Player.find(current_user.id).level.level_rank
 p
 Better start another one, so noone notices!
 = link_to 'Another Round', controller: "games", action: "startgame", id: @game

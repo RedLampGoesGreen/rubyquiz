@@ -16,6 +16,6 @@
     m = m+1
   end
   que = "Such Interesting Question No." + n.to_s
-  Question.create(answer_id: n, category_id: n, level_id: n, question_text: n )
+  Question.create(answer_id: n+1, category_id: n+1, level_id: n+1, question_text: "Dis Amazing QUestion Such Interest much wwoow" + n.to_s )
   n = n+1
 end

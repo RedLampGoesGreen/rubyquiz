@@ -1,3 +1,12 @@
+- newLevel = Player.find(current_user.id).level_id + 1
+- if newLevel < Level.maximum('id')
+	- Player.find(current_user.id).update_attributes(:level_id => newLevel)
+- else
+	p YO AR AT MAX LEVEL OVAAA 9000
+
 h1 you won!!!! Gr8 m8 r8 8/8
+p
+  strong NewLevelReached:
+  = Player.find(current_user.id).level.level_rank
 p
 = link_to 'Another Round', controller: "games", action: "startgame", id: @game

@@ -1,3 +1,4 @@
+- defaultlevel = 1
 = form_for @player do |f|
   - if @player.errors.any?
     #error_explanation
@@ -9,9 +10,9 @@
   .field
     = f.label :player_name
     = f.text_field :player_name
+
   .field
-    = f.label :level
-    = f.number_field :level_id
+  	=f.hidden_field :level_id, :value => 1
   .field
   	=f.hidden_field :user_id, :value => current_user.id
   .actions = f.submit
