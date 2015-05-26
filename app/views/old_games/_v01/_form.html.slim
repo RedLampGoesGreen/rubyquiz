@@ -7,6 +7,8 @@
           li = message
 
   .field
-    = f.label :level
-    = f.number_field :level_id
+    = f.label :category
+    = f.number_field :category_id
+  .field
+    = f.hidden_field :Level_id, :value => Player.find(current_user.id).level_id
   .actions = f.submit

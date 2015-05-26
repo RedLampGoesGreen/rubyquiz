@@ -6,16 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 99.times do |n|
+  n += 1
   level = n
   Level.create(level_rank: level)
-  cat = "Dis Interesting No." + n.to_s
-  Category.create(category_name: cat)
   9.times do |m|
     ans = "Dis Amazing Answer" + m.to_s + n.to_s
     Answer.create(answer_text: ans)
     m = m+1
   end
   que = "Such Interesting Question No." + n.to_s
-  Question.create(answer_id: n+1, category_id: n+1, level_id: n+1, question_text: "Dis Amazing QUestion Such Interest much wwoow" + n.to_s )
-  n = n+1
+  Question.create(answer_id: n, level_id: n, question_text: que )
+  cat = "Dis Interesting No." + n.to_s
+  Category.create(category_name: cat, question_ids:[n])
 end

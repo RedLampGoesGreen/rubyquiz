@@ -11,17 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525185258) do
+ActiveRecord::Schema.define(version: 20150526173634) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "answer_text"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "answers_questions", id: false, force: :cascade do |t|
-    t.integer "question_id", null: false
-    t.integer "answer_id",   null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -30,15 +25,23 @@ ActiveRecord::Schema.define(version: 20150525185258) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "games", force: :cascade do |t|
-    t.integer  "category_id"
-    t.integer  "Level_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "categories_games", id: false, force: :cascade do |t|
+    t.integer "game_id",     null: false
+    t.integer "category_id", null: false
   end
 
-  add_index "games", ["Level_id"], name: "index_games_on_Level_id"
-  add_index "games", ["category_id"], name: "index_games_on_category_id"
+  create_table "categories_questions", id: false, force: :cascade do |t|
+    t.integer "question_id", null: false
+    t.integer "category_id", null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer  "level_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "games", ["level_id"], name: "index_games_on_level_id"
 
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -76,16 +79,14 @@ ActiveRecord::Schema.define(version: 20150525185258) do
   add_index "players", ["user_id"], name: "index_players_on_user_id"
 
   create_table "questions", force: :cascade do |t|
-    t.text     "question_text"
     t.integer  "level_id"
-    t.integer  "category_id"
     t.integer  "answer_id"
+    t.text     "question_text"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   add_index "questions", ["answer_id"], name: "index_questions_on_answer_id"
-  add_index "questions", ["category_id"], name: "index_questions_on_category_id"
   add_index "questions", ["level_id"], name: "index_questions_on_level_id"
 
   create_table "users", force: :cascade do |t|

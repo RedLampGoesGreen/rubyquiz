@@ -6,7 +6,9 @@ class GamesController < ApplicationController
   def loose
     
   end
-
+  def startgame
+    
+  end
   # GET /games
   # GET /games.json
   def index
@@ -21,10 +23,6 @@ class GamesController < ApplicationController
   # GET /games/new
   def new
     @game = Game.new
-  end
-  
-  def startgame
-    
   end
 
   # GET /games/1/edit
@@ -79,6 +77,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:category_id, :Level_id)
+      params.require(:game).permit(:level_id, category_ids:[])
     end
 end

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   get 'games/win'
+
+  get 'games/loose'
+
+  get 'games/startgame'
+
+  resources :games
+  resources :questions
+  get 'games/win'
   #make it button usable
   post 'games/win'
 
@@ -9,7 +17,6 @@ Rails.application.routes.draw do
 
   get 'games/startgame'
 
-  resources :games
   resources :games
   get 'game/game'
 
@@ -27,8 +34,6 @@ Rails.application.routes.draw do
 
   get 'game/index'
 
-  resources :answers
-  resources :questions
   resources :questions
   resources :answers
   resources :players

@@ -1,7 +1,10 @@
-- variable = Game.find(params['id']).level.questions.order("RANDOM()").first.id
+- variable = Game.find(params['id']).Level.questions.order("RANDOM()").first.id
 
 p#notice = notice
 
+p
+  strong Category:
+  = Game.find(params['id']).category.category_name
 p
   strong Question:
   = Question.find(variable).question_text
