@@ -1,5 +1,11 @@
 == README
 
+Getting startet:
+1) Sing Up
+2) Create a Player for you
+3) Start a game (quiz) of your choice
+
+
 FOR TESTING PURPOSES:
 deactivate authenticate_user! in application_controller
 
