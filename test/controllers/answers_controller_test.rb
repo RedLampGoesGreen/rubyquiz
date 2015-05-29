@@ -1,7 +1,9 @@
 require 'test_helper'
+include Devise::TestHelpers
 
 class AnswersControllerTest < ActionController::TestCase
   setup do
+    sign_in(users(:one))
     @answer = answers(:one)
   end
 
