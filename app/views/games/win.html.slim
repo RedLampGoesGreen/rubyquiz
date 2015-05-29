@@ -9,4 +9,4 @@ p
   strong NewLevelReached:
   = Player.find(current_user.id).level.level_rank
 p
-= link_to 'Another Round', controller: "games", action: "startgame", id: @game
+= link_to 'Another Round', controller: "games"

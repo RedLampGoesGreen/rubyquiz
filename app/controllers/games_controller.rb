@@ -7,6 +7,16 @@ class GamesController < ApplicationController
     
   end
   def startgame
+    variable = Game.find(params['id']).level.questions.order("RANDOM()").first.id
+    @right_answer = Answer.where(id: Question.find(variable).answer_id).order("RANDOM()").first.answer_text
+    @question = Question.find(variable).question_text
+    answer_array = [@right_answer,
+      Answer.where.not(id: Question.find(variable).answer_id).order("RANDOM()").first.answer_text,
+      Answer.where.not(id: Question.find(variable).answer_id).order("RANDOM()").second.answer_text,
+      Answer.where.not(id: Question.find(variable).answer_id).order("RANDOM()").third.answer_text]
+    @answerList = answer_array.shuffle
+    puts @answerList.first
+    puts @right_answer
     
   end
   # GET /games
