@@ -14,7 +14,7 @@ table
     - @players.each do |player|
       tr
         td = player.player_name
-        td = player.level.level_rank
+        td = player.level
         td = player.user.email
         td = link_to 'Show', player
         td = link_to 'Edit', edit_player_path(player)

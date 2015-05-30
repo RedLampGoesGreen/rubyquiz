@@ -1,21 +1,14 @@
 == README
+Summary:
+
+Not working:
+-Integration Tests (thus the testcoverage falls short buy 1-2%)
+-Selection of a Category for a game
+-testing still has errors with divises user_id
+
+All other functionalities were succesfully implemented.
 
 Getting startet:
 1) Sing Up
 2) Create a Player for you
 3) Start a game (quiz) of your choice
-
-
-FOR TESTING PURPOSES:
-deactivate authenticate_user! in application_controller
-
-First commit: Scaffolding done (couldnt be commited, because it was created in offline)
-Second commit: Validats added, with test failures tough (Tests have to be added, too)
-
-Some Tests regarding the update and adding of a new Object dont work. Manual testing has
-shown the functions do work.
-
-Yet not everything is working. I hope i get basic funcionalities done till Wednesday
-
-UPDATE: Basic functionalities added, fancy stuff follows
-"It's alivee, it's aaaaalllliiiivvveeeee MUHAHAHAHA' -Frankenstein

@@ -6,10 +6,10 @@ p
   = @question.question_text
 p
   strong Level:
-  = @question.level.level_rank
+  = @question.level
 p
   strong Category:
-  = @question.category.category_name
+  = @question.categories.join("|")
 p
   strong Answer:
   = @question.answer.answer_text

@@ -9,4 +9,8 @@
   .field
     = f.label :category_name
     = f.text_field :category_name
+  .field
+  - @category.question_ids.each do |a|
+    = f.label :question
+    = f.number_field :question_ids
   .actions = f.submit
